@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strange Past - authorization</title>
+<style>body{font:16px system-ui;max-width:640px;margin:40px auto;padding:0 16px}code{display:block;word-break:break-all;background:#f3f3f3;padding:12px;border-radius:8px;font-size:15px}button{margin-top:12px;padding:10px 16px;font-size:15px}</style>
+<h1>Strange Past</h1>
+<p id="msg">Reading authorization code...</p>
+<code id="code"></code>
+<button onclick="navigator.clipboard.writeText(document.getElementById('code').textContent);this.textContent='Copied'">Copy code</button>
+<script>
+const p=new URLSearchParams(location.search);
+const c=p.get('code'),e=p.get('error');
+document.getElementById('code').textContent=c||e||'(none)';
+document.getElementById('msg').textContent=c?'Authorization code (valid for a few minutes). Copy it into the GitHub workflow "TikTok connect".':'No code received: '+(p.get('error_description')||e||'');
+</script>

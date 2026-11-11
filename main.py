@@ -48,7 +48,7 @@ def host_video(path):
 def build_caption(s):
     tags = [t.strip("#").replace(" ", "") for t in s.get("hashtags", [])]
     tags = list(dict.fromkeys(["history", "historyfacts"] + tags))[:5]
-    return f"{s['caption']}\n\nVisuals are AI-generated.\n\n" + " ".join("#" + t for t in tags)
+    return f"{s['caption']}\n\nNarrated with an AI voice.\n\n" + " ".join("#" + t for t in tags)
 
 
 def make_reel():
@@ -61,8 +61,8 @@ def make_reel():
         audio = os.path.join(work, f"a{i}.mp3")
         dur, words = tts.speak(sc["narration"], audio)
         img = os.path.join(work, f"i{i}.jpg")
-        ok = images.make(sc["image_prompt"], img)
-        print(f"[scene {i}] {dur:.1f}s image={'ai' if ok else 'fallback'}")
+        src = images.make(sc, img, wiki_title=s["wikipedia_title"])
+        print(f"[scene {i}] {dur:.1f}s image={src}")
         scenes.append({"image": img, "audio": audio, "duration": dur, "words": words})
     os.makedirs(OUT, exist_ok=True)
     stamp = dt.datetime.utcnow().strftime("%Y%m%d-%H%M")

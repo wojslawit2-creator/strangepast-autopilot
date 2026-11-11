@@ -51,9 +51,32 @@ def build_caption(s):
     return f"{s['caption']}\n\nNarrated with an AI voice.\n\n" + " ".join("#" + t for t in tags)
 
 
+QUEUE = os.path.join(ROOT, "data", "queue.json")
+
+
+def next_script(used):
+    """Take the next hand-written script from data/queue.json, else ask Gemini."""
+    queue = json.load(open(QUEUE)) if os.path.exists(QUEUE) else []
+    used_l = {t.lower() for t in used}
+    while queue:
+        s = queue.pop(0)
+        json.dump(queue, open(QUEUE, "w"), indent=1, ensure_ascii=False)
+        if s["topic"].lower() in used_l:
+            continue
+        try:
+            if not script_gen.wikipedia_exists(s["wikipedia_title"]):
+                print(f"[queue] skipped, no Wikipedia article: {s['wikipedia_title']}")
+                continue
+        except Exception as e:
+            print(f"[queue] wiki check unavailable ({e}), using script anyway")
+        print(f"[queue] {len(queue)} scripts left")
+        return s
+    return script_gen.generate(used)
+
+
 def make_reel():
     used = json.load(open(USED))
-    s = script_gen.generate(used)
+    s = next_script(used)
     print(f"[script] {s['topic']}  (wiki: {s['wikipedia_title']})")
     work = tempfile.mkdtemp()
     scenes = []

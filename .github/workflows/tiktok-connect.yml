@@ -1,0 +1,24 @@
+name: TikTok connect
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "Code from the authorization page"
+        required: true
+
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          CODE: ${{ github.event.inputs.code }}
+        run: python reel/tiktok_auth.py "$CODE"

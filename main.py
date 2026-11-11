@@ -89,7 +89,7 @@ def make_reel():
         print(f"[scene {i}] {dur:.1f}s image={src}")
         scenes.append({"image": img, "audio": audio, "duration": dur, "words": words})
     os.makedirs(OUT, exist_ok=True)
-    stamp = dt.datetime.utcnow().strftime("%Y%m%d-%H%M")
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d-%H%M")
     out = os.path.join(OUT, f"reel-{stamp}.mp4")
     music = os.path.join(ROOT, "assets", "music.mp3")
     total = render.build(scenes, s.get("on_screen_title", ""), work, out, music=music)
@@ -101,11 +101,15 @@ def make_reel():
 def main():
     s, path = make_reel()
     caption = build_caption(s)
-    result = {"time": dt.datetime.utcnow().isoformat(), "topic": s["topic"], "file": os.path.basename(path)}
+    result = {"time": dt.datetime.now(dt.timezone.utc).isoformat(), "topic": s["topic"], "file": os.path.basename(path)}
     with open(os.path.join(OUT, "caption.txt"), "w") as f:
         f.write(caption)
 
     if DRY_RUN:
+        try:
+            print(f"[dry-run] preview: {host_video(path)}")
+        except Exception as e:
+            print(f"[dry-run] could not host preview: {e}")
         print("[dry-run] not publishing")
     else:
         errors = []

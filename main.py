@@ -60,7 +60,8 @@ def next_script(used):
     used_l = {t.lower() for t in used}
     while queue:
         s = queue.pop(0)
-        json.dump(queue, open(QUEUE, "w"), indent=1, ensure_ascii=False)
+        if not DRY_RUN:
+            json.dump(queue, open(QUEUE, "w"), indent=1, ensure_ascii=False)
         if s["topic"].lower() in used_l:
             continue
         try:
@@ -131,6 +132,8 @@ def main():
             result["errors"] = errors
             print("\n".join(errors))
 
+    if DRY_RUN:
+        return
     json.dump(json.load(open(USED)) + [s["topic"]], open(USED, "w"), indent=1)
     with open(LOG, "a") as f:
         f.write(json.dumps(result) + "\n")

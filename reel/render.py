@@ -71,8 +71,8 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,{CAPTION_FONT},104,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,1,0,1,7,4,5,60,60,0,1
-Style: Title,{CAPTION_FONT},118,&H0000D7FF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,2,0,1,8,5,5,60,60,0,1
+Style: Cap,{CAPTION_FONT},128,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,1,0,1,7,4,5,60,60,0,1
+Style: Title,{CAPTION_FONT},140,&H0000D7FF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,100,100,2,0,1,8,5,5,60,60,0,1
 Style: Handle,{CAPTION_FONT},40,&H80FFFFFF,&H00FFFFFF,&H80000000,&H00000000,0,0,0,0,100,100,2,0,1,2,0,2,0,0,90,1
 
 [Events]
@@ -81,7 +81,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     lines = []
     if title:
         lines.append(f"Dialogue: 2,{_ts(0)},{_ts(2.6)},Title,,0,0,0,,"
-                     f"{{\\pos({W // 2},{int(H * 0.2)})\\fs{_fit(title, 118, 12)}\\fad(0,250)\\t(0,180,\\fscx112\\fscy112)\\t(180,320,\\fscx100\\fscy100)}}{_clean(title)}")
+                     f"{{\\pos({W // 2},{int(H * 0.2)})\\fs{_fit(title, 140, 16)}\\fad(0,250)\\t(0,180,\\fscx112\\fscy112)\\t(180,320,\\fscx100\\fscy100)}}{_clean(title)}")
     for chunk in _chunks(words):
         for i, w in enumerate(chunk):
             start = w["start"]
@@ -92,7 +92,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
                 parts.append("{\\c&H0000E5FF&}" + txt + "{\\c&H00FFFFFF&}" if j == i else txt)
             pop = "\\t(0,90,\\fscx108\\fscy108)\\t(90,160,\\fscx100\\fscy100)" if i == 0 else ""
             lines.append(f"Dialogue: 1,{_ts(start)},{_ts(end)},Cap,,0,0,0,,"
-                         f"{{\\pos({W // 2},{int(H * 0.64)})\\fs{_fit(' '.join(c['text'] for c in chunk), 104, 15)}{pop}}}" + " ".join(parts))
+                         f"{{\\pos({W // 2},{int(H * 0.64)})\\fs{_fit(' '.join(c['text'] for c in chunk), 128, 18)}{pop}}}" + " ".join(parts))
     lines.append(f"Dialogue: 0,{_ts(0)},{_ts(total)},Handle,,0,0,0,,{HANDLE}")
     with open(path, "w", encoding="utf-8") as f:
         f.write(hdr + "\n".join(lines) + "\n")

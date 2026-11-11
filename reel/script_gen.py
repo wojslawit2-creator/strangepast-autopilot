@@ -45,11 +45,12 @@ Hard rules:
 - Scene 1 is the HOOK: max 12 words, a shocking concrete claim with a year or place. No "Did you know".
 - 5 or 6 scenes. The last scene ends with a short question that makes people comment.
 - image_prompt: a vivid cinematic description of a single historical scene for an AI image generator, period-accurate, dramatic lighting, no text, no letters, no modern objects, no gore.
+- image_query: 2-5 words to search Wikimedia Commons for a real historical painting, engraving, map or old photo that fits this scene (e.g. "Strasbourg 1518 engraving", "Louis XIV portrait", "medieval plague doctor").
 - on_screen_title: 2-5 words, ALL CAPS, for the first 2 seconds.
 
 Return ONLY JSON:
 {{"topic": "...", "wikipedia_title": "...", "on_screen_title": "...",
-  "scenes": [{{"narration": "...", "image_prompt": "..."}}],
+  "scenes": [{{"narration": "...", "image_query": "...", "image_prompt": "..."}}],
   "caption": "1-2 sentence caption that teases the story, ending with a question",
   "hashtags": ["history", "..."]}}
 """
@@ -64,18 +65,24 @@ def _extract_json(text):
 
 def _gemini(prompt):
     key = os.environ["GEMINI_API_KEY"]
-    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-    r = requests.post(
-        f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
-        params={"key": key},
-        json={
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 1.0, "responseMimeType": "application/json"},
-        },
-        timeout=120,
-    )
-    r.raise_for_status()
-    return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    models = [m for m in (os.environ.get("GEMINI_MODEL"), "gemini-flash-latest", "gemini-2.5-flash") if m]
+    last = None
+    for model in models:
+        r = requests.post(
+            f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+            params={"key": key},
+            json={
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 1.0, "responseMimeType": "application/json"},
+            },
+            timeout=180,
+        )
+        if r.status_code == 404:
+            last = f"model {model} not found"
+            continue
+        r.raise_for_status()
+        return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    raise RuntimeError(last)
 
 
 def _pollinations(prompt):

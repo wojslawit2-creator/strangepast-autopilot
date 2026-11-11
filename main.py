@@ -37,7 +37,10 @@ def host_video(path):
     url = f"https://x-access-token:{os.environ['GITHUB_TOKEN']}@github.com/{REPO}.git"
     sh("git", "init", "-q", tmp)
     sh("cp", path, os.path.join(tmp, name))
-    for c in (["checkout", "-q", "--orphan", "media"], ["add", name],
+    sheet = name.replace(".mp4", "-preview.jpg")
+    sh("ffmpeg", "-y", "-v", "error", "-i", path, "-vf", "fps=1/3,scale=360:-1,tile=5x2",
+       "-frames:v", "1", os.path.join(tmp, sheet), check=False)
+    for c in (["checkout", "-q", "--orphan", "media"], ["add", "."],
               ["-c", "user.name=strangepast-bot", "-c", "user.email=bot@users.noreply.github.com",
                "commit", "-q", "-m", f"media {name}"],
               ["push", "-q", "-f", url, "media"]):

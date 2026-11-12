@@ -1,39 +1,5 @@
 [
  {
-  "topic": "The Great Emu War",
-  "wikipedia_title": "Emu War",
-  "on_screen_title": "AUSTRALIA LOST A WAR TO BIRDS",
-  "scenes": [
-   {
-    "narration": "In 1932, Australia sent soldiers with machine guns to fight birds. And lost.",
-    "image_query": "Emu War 1932"
-   },
-   {
-    "narration": "About twenty thousand emus had invaded the wheat fields of Western Australia, destroying farmers' crops.",
-    "image_query": "emus Western Australia"
-   },
-   {
-    "narration": "So the army sent Major Meredith, a few soldiers, two Lewis guns and ten thousand rounds of ammunition.",
-    "image_query": "Lewis gun 1930s"
-   },
-   {
-    "narration": "But the emus split into small groups, ran at fifty kilometers an hour, and kept going even after being hit. The major said they could face machine guns with the invulnerability of tanks.",
-    "image_query": "emu running"
-   },
-   {
-    "narration": "After weeks of failure, the army withdrew. The emus kept the fields. Who really won this war?",
-    "image_query": "emu Dromaius novaehollandiae"
-   }
-  ],
-  "caption": "The Australian army vs 20,000 emus. Guess who won.",
-  "hashtags": [
-   "emuwar",
-   "australia",
-   "weirdhistory",
-   "funnyhistory"
-  ]
- },
- {
   "topic": "Great Molasses Flood",
   "wikipedia_title": "Great Molasses Flood",
   "on_screen_title": "A WAVE OF SYRUP KILLED 21",

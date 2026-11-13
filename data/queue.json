@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Tycho Brahe's nose and moose",
-  "wikipedia_title": "Tycho Brahe",
-  "on_screen_title": "HE LOST HIS NOSE OVER MATH",
-  "scenes": [
-   {
-    "narration": "A famous astronomer lost his nose in a duel over math.",
-    "image_query": "Tycho Brahe portrait"
-   },
-   {
-    "narration": "In 1566, Danish nobleman Tycho Brahe reportedly fought his cousin over a mathematical formula. A sword sliced off part of his nose.",
-    "image_query": "Tycho Brahe engraving"
-   },
-   {
-    "narration": "For the rest of his life he wore a metal nose, and analysis of his remains showed it was made of brass.",
-    "image_query": "Tycho Brahe nose"
-   },
-   {
-    "narration": "It gets weirder. He reportedly had a pet moose that drank too much beer at a party, fell down the stairs, and died.",
-    "image_query": "Uraniborg"
-   },
-   {
-    "narration": "Yet this man mapped the stars more precisely than anyone before the telescope. Genius or madman?",
-    "image_query": "Tycho Brahe mural quadrant"
-   }
-  ],
-  "caption": "Metal nose, a party moose, and the most precise star maps of his time.",
-  "hashtags": [
-   "astronomy",
-   "weirdhistory",
-   "denmark",
-   "science"
-  ]
- },
- {
   "topic": "Cadaver Synod",
   "wikipedia_title": "Cadaver Synod",
   "on_screen_title": "A POPE PUT A CORPSE ON TRIAL",

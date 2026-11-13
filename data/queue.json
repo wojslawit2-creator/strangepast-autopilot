@@ -1,39 +1,5 @@
 [
  {
-  "topic": "London Beer Flood",
-  "wikipedia_title": "London Beer Flood",
-  "on_screen_title": "LONDON DROWNED IN BEER",
-  "scenes": [
-   {
-    "narration": "In 1814, a tsunami of beer flooded the streets of London.",
-    "image_query": "Meux Horse Shoe Brewery"
-   },
-   {
-    "narration": "At the Horse Shoe Brewery, a huge vat of beer burst and set off a chain reaction with the other vats.",
-    "image_query": "London brewery 19th century"
-   },
-   {
-    "narration": "More than one million liters of beer exploded out, smashing walls and flooding the poor houses nearby.",
-    "image_query": "St Giles London 19th century"
-   },
-   {
-    "narration": "Eight people died. Legend says crowds rushed to scoop up the free beer, but historians say that story may be exaggerated.",
-    "image_query": "Tottenham Court Road 1810s"
-   },
-   {
-    "narration": "The brewery was found not guilty. It was called an act of God. Would you have grabbed a cup?",
-    "image_query": "Georgian London street print"
-   }
-  ],
-  "caption": "A beer tsunami hit London in 1814. This is not a joke.",
-  "hashtags": [
-   "london",
-   "beer",
-   "weirdhistory",
-   "historyfacts"
-  ]
- },
- {
   "topic": "Tycho Brahe's nose and moose",
   "wikipedia_title": "Tycho Brahe",
   "on_screen_title": "HE LOST HIS NOSE OVER MATH",

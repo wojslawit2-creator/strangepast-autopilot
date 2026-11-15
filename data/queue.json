@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Defenestration of Prague",
-  "wikipedia_title": "Defenestrations of Prague",
-  "on_screen_title": "THROWN OUT OF A WINDOW",
-  "scenes": [
-   {
-    "narration": "In 1618, two officials were thrown out of a castle window, and it started a thirty year war.",
-    "image_query": "Defenestration of Prague 1618"
-   },
-   {
-    "narration": "Angry Protestant nobles in Prague grabbed two Catholic royal officials and their secretary and threw them out of a window about twenty meters high.",
-    "image_query": "Prague Castle Bohemian Chancellery"
-   },
-   {
-    "narration": "Amazingly, all three survived. Catholics said angels caught them. Protestants later claimed they landed in a pile of manure.",
-    "image_query": "Defenestration Prague engraving"
-   },
-   {
-    "narration": "But the incident lit the fuse for the Thirty Years' War, one of the deadliest conflicts in European history, with millions dead.",
-    "image_query": "Thirty Years War painting"
-   },
-   {
-    "narration": "Fun fact: the word defenestration means throwing someone out of a window. Angels or manure?",
-    "image_query": "Prague 17th century view"
-   }
-  ],
-  "caption": "A window, three officials, and one of Europe's deadliest wars.",
-  "hashtags": [
-   "prague",
-   "thirtyyearswar",
-   "weirdhistory",
-   "europe"
-  ]
- },
- {
   "topic": "The Great Stink",
   "wikipedia_title": "Great Stink",
   "on_screen_title": "LONDON SMELLED SO BAD",

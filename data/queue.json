@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Phineas Gage",
-  "wikipedia_title": "Phineas Gage",
-  "on_screen_title": "AN IRON BAR THROUGH HIS HEAD",
-  "scenes": [
-   {
-    "narration": "In 1848, an iron bar shot straight through a man's skull, and he survived.",
-    "image_query": "Phineas Gage"
-   },
-   {
-    "narration": "Phineas Gage was building a railroad in Vermont when an explosion launched a meter long iron rod through his head.",
-    "image_query": "Phineas Gage tamping iron"
-   },
-   {
-    "narration": "It entered under his left cheek and flew out the top of his skull. Minutes later, he was talking.",
-    "image_query": "Phineas Gage skull"
-   },
-   {
-    "narration": "But friends said his personality changed so much that he was, in their words, no longer Gage.",
-    "image_query": "Phineas Gage daguerreotype"
-   },
-   {
-    "narration": "His case taught doctors that parts of the brain shape who we are. Could you survive that?",
-    "image_query": "phrenology brain 19th century"
-   }
-  ],
-  "caption": "He survived an iron rod through the brain and changed neuroscience.",
-  "hashtags": [
-   "neuroscience",
-   "weirdhistory",
-   "medicalhistory",
-   "historyfacts"
-  ]
- },
- {
   "topic": "Victor Lustig sold the Eiffel Tower",
   "wikipedia_title": "Victor Lustig",
   "on_screen_title": "HE SOLD THE EIFFEL TOWER",

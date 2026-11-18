@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Medieval animal trials",
-  "wikipedia_title": "Animal trial",
-  "on_screen_title": "PIGS WERE PUT ON TRIAL",
-  "scenes": [
-   {
-    "narration": "In medieval Europe, animals were put on trial. With real lawyers.",
-    "image_query": "animal trial pig Falaise"
-   },
-   {
-    "narration": "In 1386, in Falaise, France, a pig attacked a child. The pig was arrested, tried and sentenced to death.",
-    "image_query": "Falaise France"
-   },
-   {
-    "narration": "According to accounts, it was even dressed in human clothes for its execution.",
-    "image_query": "medieval pig manuscript"
-   },
-   {
-    "narration": "Rats were also put on trial. One lawyer defended rats in Autun, arguing they couldn't come to court because of the cats along the way.",
-    "image_query": "medieval rats illustration"
-   },
-   {
-    "narration": "Courts treated animals as if they could commit crimes. Which animal would you put on trial?",
-    "image_query": "medieval court of justice"
-   }
-  ],
-  "caption": "Pigs, rats and insects all had their day in court.",
-  "hashtags": [
-   "medieval",
-   "weirdhistory",
-   "animals",
-   "law"
-  ]
- },
- {
   "topic": "War of the Bucket",
   "wikipedia_title": "Battle of Zappolino",
   "on_screen_title": "THE WAR OF THE BUCKET",

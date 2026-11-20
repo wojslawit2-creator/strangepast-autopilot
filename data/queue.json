@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Halifax Explosion",
-  "wikipedia_title": "Halifax Explosion",
-  "on_screen_title": "THE BIGGEST BLAST BEFORE THE A-BOMB",
-  "scenes": [
-   {
-    "narration": "In 1917, a ship explosion flattened part of a Canadian city.",
-    "image_query": "Halifax Explosion"
-   },
-   {
-    "narration": "In Halifax harbor, the French ship Mont-Blanc, packed with explosives, collided with another ship, the Imo.",
-    "image_query": "SS Mont-Blanc"
-   },
-   {
-    "narration": "It caught fire. Crowds gathered to watch. Then it exploded, in the largest human made blast before the atomic bomb.",
-    "image_query": "Halifax Explosion cloud"
-   },
-   {
-    "narration": "Nearly two thousand people died. The ship's anchor shaft was thrown more than three kilometers away.",
-    "image_query": "Halifax Explosion devastation"
-   },
-   {
-    "narration": "The next day, a blizzard hit the ruined city. Had you heard of this disaster before?",
-    "image_query": "Halifax 1917 ruins snow"
-   }
-  ],
-  "caption": "One collision, one burning ship, and a blast felt hundreds of kilometers away.",
-  "hashtags": [
-   "canada",
-   "halifax",
-   "disaster",
-   "historyfacts"
-  ]
- },
- {
   "topic": "Mary Toft rabbit hoax",
   "wikipedia_title": "Mary Toft",
   "on_screen_title": "SHE 'GAVE BIRTH' TO RABBITS",

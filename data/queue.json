@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Tsutomu Yamaguchi survived two atomic bombs",
-  "wikipedia_title": "Tsutomu Yamaguchi",
-  "on_screen_title": "HE SURVIVED BOTH ATOMIC BOMBS",
-  "scenes": [
-   {
-    "narration": "One man survived both atomic bombs.",
-    "image_query": "Tsutomu Yamaguchi"
-   },
-   {
-    "narration": "Tsutomu Yamaguchi was in Hiroshima on a business trip on August sixth, 1945, when the first bomb exploded.",
-    "image_query": "Hiroshima 1945"
-   },
-   {
-    "narration": "Badly burned, he went home to Nagasaki and returned to work.",
-    "image_query": "Nagasaki 1945"
-   },
-   {
-    "narration": "Three days later, while describing the blast to his boss, the second bomb hit Nagasaki. He survived again.",
-    "image_query": "Nagasaki atomic bomb cloud"
-   },
-   {
-    "narration": "He lived until 2010, aged ninety three, and spoke against nuclear weapons. Luckiest or unluckiest man ever?",
-    "image_query": "Nagasaki Peace Park"
-   }
-  ],
-  "caption": "Hiroshima, then Nagasaki, three days apart. He lived to 93.",
-  "hashtags": [
-   "ww2",
-   "japan",
-   "survivor",
-   "historyfacts"
-  ]
- },
- {
   "topic": "Year Without a Summer",
   "wikipedia_title": "Year Without a Summer",
   "on_screen_title": "THE YEAR SUMMER DISAPPEARED",

@@ -1,39 +1,5 @@
 [
  {
-  "topic": "Year Without a Summer",
-  "wikipedia_title": "Year Without a Summer",
-  "on_screen_title": "THE YEAR SUMMER DISAPPEARED",
-  "scenes": [
-   {
-    "narration": "In 1816, summer never came.",
-    "image_query": "Year Without a Summer"
-   },
-   {
-    "narration": "A year earlier, Mount Tambora in Indonesia erupted, one of the biggest eruptions in recorded history.",
-    "image_query": "Mount Tambora"
-   },
-   {
-    "narration": "Its ash spread around the planet and cooled it. In New England it snowed in June.",
-    "image_query": "New England snow 19th century"
-   },
-   {
-    "narration": "Crops failed across Europe and North America, and famine followed.",
-    "image_query": "1816 famine Europe"
-   },
-   {
-    "narration": "Stuck indoors on a rainy summer at Lake Geneva, Mary Shelley started writing Frankenstein. What would you have done?",
-    "image_query": "Villa Diodati"
-   }
-  ],
-  "caption": "A volcano, snow in June, and the birth of Frankenstein.",
-  "hashtags": [
-   "volcano",
-   "frankenstein",
-   "weirdhistory",
-   "climate"
-  ]
- },
- {
   "topic": "Caligula's horse Incitatus",
   "wikipedia_title": "Incitatus",
   "on_screen_title": "AN EMPEROR'S HORSE IN POLITICS",
